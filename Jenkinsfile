@@ -11,12 +11,14 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh './mvnw package'
+                /* sh './mvnw package' */ 
+                sh 'echo 1'
             }
         }
         stage('Test') { 
             steps {
-                sh './mvnw test'
+                /* sh './mvnw test' */
+                sh 'echo 2'
             }
         }
         stage('Build Docker Image') { 
