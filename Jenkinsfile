@@ -14,7 +14,7 @@ pipeline {
         }
         stage('BuildDocker') { 
             steps {
-                /* sh './mvnw spring-boot:build-image' */
+                echo "TO COME"
             }
         }
     }
