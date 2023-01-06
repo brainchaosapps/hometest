@@ -1,6 +1,10 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.8.7-eclipse-temurin-11' } }
+    agent any
+    tools { 
+        maven 'Maven 3.8.7' 
+        jdk 'jdk17' 
+    }
     stages {
         stage('Compile') {
             environment {
