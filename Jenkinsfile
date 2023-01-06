@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh './mvnw package'
+                sh './mvnw install'
             }
         }
         stage('Test') { 
