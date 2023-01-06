@@ -12,9 +12,9 @@ pipeline {
                 sh './mvnw test -P css'
             }
         }
-        stage('BuildDocker') { 
+        stage('Build Docker Image') { 
             steps {
-                echo "TO COME"
+                sh './mvnw spring-boot:build-image'
             }
         }
     }
