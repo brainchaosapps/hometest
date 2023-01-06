@@ -12,12 +12,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh './mvnw package -P css'
+                sh './mvnw package'
             }
         }
         stage('Test') { 
             steps {
-                sh './mvnw test -P css'
+                sh './mvnw test'
             }
         }
         stage('Build Docker Image') { 
